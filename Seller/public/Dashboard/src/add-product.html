@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en" class="no-focus">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Doorliver Dashboard</title>
+
+    <meta name="description"
+        content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Codebase">
+    <meta property="og:description"
+        content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon.ico">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+
+    <!-- Page JS Plugins CSS -->
+    <link rel="stylesheet" href="assets/js/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.css">
+    <link rel="stylesheet" href="assets/js/plugins/dropzonejs/dist/min/dropzone.min.css">
+
+    <!-- Fonts and Codebase framework -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700&display=swap">
+    <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+    <!-- END Stylesheets -->
+</head>
+
+<body>
+    <div id="page-container"
+        class="enable-page-overlay side-scroll page-header-glass page-header-inverse main-content-boxed">
+        <header id="page-header">
+            <!-- Header Content -->
+            <div class="content-header">
+                <div class="content-header-section"></div>
+
+                <div class="content-header-section">
+                    <!-- User Dropdown -->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user d-sm-none"></i>
+                            <span class="d-none d-sm-inline-block"></span>
+                            <i class="fa fa-angle-down ml-5"></i>
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-right min-width-200"
+                            aria-labelledby="page-header-user-dropdown">
+                            <h5 class="h6 text-center py-10 mb-5 border-b text-uppercase">User</h5>
+
+                            <a class="dropdown-item" href="op_auth_signin.html">
+                                <i class="si si-logout mr-5"></i> Sign Out
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!-- END Header -->
+
+        <!-- Main Container -->
+        <main id="main-container">
+
+            <!-- Hero -->
+            <div class="bg-image" style="background-image: url('assets/media/photos/photo26@2x.jpg');">
+                <div class="bg-black-op-75">
+                    <div class="content content-top content-full text-center">
+                        <div class="py-20">
+                            <h1 class="h2 font-w700 text-white mb-10">Add a product</h1>
+                            <h2 class="h4 font-w400 text-white-op mb-0">Whatever type of product you want to sell.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcrumb -->
+            <div class="bg-body-light border-b">
+                <div class="content py-5 text-center">
+                    <nav>
+                        <button class="btn btn-rounded btn-alt-primary" onclick="submitData()"
+                            style="float:right;">Complete </button>
+                        <div class=" breadcrumb bg-body-light mb-0">
+                            <a class="breadcrumb-item" href="#">Add Products</a>
+                        </div>
+
+                    </nav>
+
+                </div>
+            </div>
+            <!-- END Breadcrumb -->
+
+            <!-- Page Content -->
+            <div class="content">
+
+                <!-- END Overview -->
+
+                <!-- Update Product -->
+                <h2 class="content-heading">Add Product</h2>
+
+                <div class="row gutters-tiny">
+
+                    <!-- Basic Info -->
+                    <div class="col-md-7">
+                        <form action="add-product.html" method="post" onsubmit="return false;">
+                            <div class="block block-rounded block-themed">
+                                <div class="block-header bg-gd-primary">
+                                    <h3 class="block-title">Basic Info</h3>
+
+                                </div>
+                                <div class="block-content block-content-full">
+
+                                    <div class="form-group row">
+                                        <label class="col-12" for="ecom-product-name">Name</label>
+                                        <div class="col-12">
+                                            <input type="text" class="form-control" id="ecom-product-name"
+                                                name="ecom-product-name"
+                                                placeholder="Polo Ralph Lauren Mens Fitness Work Out Hoodie" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12" for="ecom-product-category">Category</label>
+                                        <div class="col-12">
+                                            <!-- Select2 (.js-select2 class is initialized in Helpers.select2()) -->
+                                            <!-- For more info and examples you can check out https://github.com/select2/select2 -->
+                                            <select class="js-select2 form-control" id="ecom-product-category"
+                                                name="ecom-product-category" style="width: 100%;"
+                                                data-placeholder="Choose one..">
+                                                <option></option>
+                                                <!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                                                <option value="Fashion" selected>Fashion</option>
+                                                <option value="Electronics">Electronics</option>
+                                                <option value="Mobile Phones">Mobile Phones</option>
+                                                <option value="House">House</option>
+                                                <option value="Hobby">Hobby</option>
+                                                <option value="Auto - Moto">Auto - Moto</option>
+                                                <option value="Kids">Kids</option>
+                                                <option value="Health">Health</option>
+                                                <option value="Video Games">Video Games</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12" for="ecom-product-description-short">Short
+                                            Description</label>
+                                        <div class="col-12">
+                                            <textarea class="form-control" id="ecom-product-description-short"
+                                                name="ecom-product-description-short"
+                                                placeholder="Description visible on preview.." rows="6"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12">Description</label>
+                                        <div class="col-12">
+                                            <textarea class="form-control" id="js-ckeditor" name="js-ckeditor"
+                                                placeholder="Main Description" rows="8"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- END Basic Info -->
+
+                    <!-- More Options -->
+                    <div class="col-md-5">
+                        <div class="block block-rounded block-themed">
+                            <div class="block-header bg-gd-primary">
+                                <h3 class="block-title">Images</h3>
+
+                            </div>
+
+                            <div class="block-content block-content-full">
+
+                                <!-- END Existing Images -->
+
+                                <!-- DropzoneJS Container -->
+                                <!-- For more info and examples you can check out http://www.dropzonejs.com/#usage -->
+                                <form class="dropzone"  type="file" accept="image/x-png,image/gif,image/jpeg" action="add-product.html"></form>
+                            </div>
+                        </div>
+
+                        <!-- Status -->
+                        <form action="add-product.html" method="post" onsubmit="return false;">
+                            <div class="block block-rounded block-themed">
+                                <div class="block-header bg-gd-primary">
+                                    <h3 class="block-title">Status</h3>
+
+                                </div>
+                                <div class="block-content block-content-full">
+
+                                    <div class="form-group row">
+                                        <label class="col-12" for="ecom-product-price">Price</label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-fw fa-usd"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control" id="ecom-product-price"
+                                                    name="ecom-product-price" placeholder="Price in USD.." value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-12" for="ecom-product-stock">Stock</label>
+                                        <div class="col-sm-6">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="fa fa-fw fa-archive"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control" id="ecom-product-stock"
+                                                    name="ecom-product-stock" placeholder="0" value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+
+                                        <label class="col-12">Condition</label>
+                                        <div class="col-12">
+                                            <label class="css-control css-control-primary css-radio">
+                                                <input type="radio" class="css-control-input"
+                                                    id="ecom-product-condition-new" name="ecom-product-condition"
+                                                    value="new" checked>
+                                                <span class="css-control-indicator"></span> New
+                                            </label>
+                                            <label class="css-control css-control-secondary css-radio">
+                                                <input type="radio" class="css-control-input"
+                                                    id="ecom-product-condition-old" name="ecom-product-condition"
+                                                    value="used">
+                                                <span class="css-control-indicator"></span> Used
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                    </div>
+                    </form>
+                    <!-- END Status -->
+
+
+                    <!-- END Meta Data -->
+
+                    <!-- Images -->
+
+                    <!-- END Images -->
+                </div>
+                <!-- END More Options -->
+            </div>
+            <!-- END Update Product -->
+    </div>
+    <!-- END Page Content -->
+
+    </main>
+    <!-- END Main Container -->
+
+    <!-- Footer -->
+    <footer id="page-footer" class="opacity-0">
+        <div class="content py-20 font-size-sm clearfix">
+
+            <div class="float-left">
+                <a class="font-w600" href="https://doorliver.com" target="_blank">Doorliver</a> &copy; <span
+                    class="js-year-copy"></span>
+            </div>
+        </div>
+    </footer>
+    <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+            Codebase JS Core
+
+            Vital libraries and plugins used in all pages. You can choose to not include this file if you would like
+            to handle those dependencies through webpack. Please check out assets/_es6/main/bootstrap.js for more info.
+
+            If you like, you could also include them separately directly from the assets/js/core folder in the following
+            order. That can come in handy if you would like to include a few of them (eg jQuery) from a CDN.
+
+            assets/js/core/jquery.min.js
+            assets/js/core/bootstrap.bundle.min.js
+            assets/js/core/simplebar.min.js
+            assets/js/core/jquery-scrollLock.min.js
+            assets/js/core/jquery.appear.min.js
+            assets/js/core/jquery.countTo.min.js
+            assets/js/core/js.cookie.min.js
+        -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDt9Dz2UDPpAvNoesHzWMmQSveYWMsiTG8",
+            authDomain: "driver-4834d.firebaseapp.com",
+            databaseURL: "https://driver-4834d.firebaseio.com",
+            projectId: "driver-4834d",
+            storageBucket: "driver-4834d.appspot.com",
+            messagingSenderId: "1035330404068",
+            appId: "1:1035330404068:web:a0a3e7981be8efdba0b6f1",
+            measurementId: "G-PC0ZCYNDM2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+
+    <script src="assets/js/codebase.core.min.js"></script>
+
+    <!--
+            Codebase JS
+
+            Custom functionality including Blocks/Layout API as well as other vital and optional helpers
+            webpack is putting everything together at assets/_es6/main/app.js
+        -->
+    <script src="assets/js/codebase.app.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/ckeditor/ckeditor.js"></script>
+    <script src="assets/js/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+    <script src="assets/js/plugins/select2/js/select2.full.min.js"></script>
+    <script src="assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js"></script>
+    <script src="assets/js/plugins/dropzonejs/dropzone.min.js"></script>
+
+    <!-- Page JS Helpers (CKEditor + BS Maxlength + Select + Tags Inputs plugins) -->
+    <script>
+        jQuery(function () {
+            Codebase.helpers(['ckeditor', 'maxlength', 'select2', 'tags-inputs']);
+        });
+    </script>
+</body>
+
+</html>
+<script>
+    var user;
+    auth.onAuthStateChanged(firebaseUser => {
+        if (firebaseUser) {
+            this.user = firebaseUser;
+            document.getElementsByClassName("fa-user")[0].innerHTML = this.user.displayName
+            console.log  (user)
+        } else {
+            this.user = null;
+        }
+    });
+
+
+
+    function submitData() {
+
+        // get user info
+        var storeName = document.getElementById("ecom-product-name").value
+        var category = document.getElementById("ecom-product-category").value
+        var smallDescription = document.getElementById("ecom-product-description-short").value
+        var fullDescription = document.getElementById("js-ckeditor").value
+        var price = document.getElementById("ecom-product-price").value
+        var stock = document.getElementById("ecom-product-stock").value
+        var getImages = document.getElementsByTagName('img');
+
+        var images = [];
+        for (var i = 0; i < getImages.length; i++) {
+            images.push(getImages[i].src);
+        }
+        var newCondition = document.getElementById('ecom-product-condition-new').checked;
+        var condition;
+
+        if (newCondition == true) {
+            condition = "New"
+
+        } else {
+
+            condition = "Used"
+
+        }
+
+        db.collection('stores').doc(user.uid).get()
+            .then(snapshot => {
+
+                var storeData = snapshot.data();
+                console.log  (storeData)
+
+                db.collection('products').add({
+                        name: storeName,
+                        category: category,
+                        images: images,
+                        salePrice: price,
+                        condition: condition,
+                        // returns: policy,
+                        avalible: true,
+                        store: {
+                            id: user.uid,
+                            name: storeData.store,
+                            address: storeData.location.address,
+                            zipcode: storeData.location.zipcode,
+
+                        },
+                        description: {
+                            small: smallDescription,
+                            full: fullDescription
+                        },
+                        sold: 0,
+                        stock: stock,
+                        // features: features,
+                        // itemSize: itemSize,
+                    })
+
+                    .then(function (response) {
+                        console.log  (response)
+                        window.location.href = "dashboard.html";
+
+                    }).catch(err => {
+                        console.log  (err)
+                        alert("Sorry Please retry, error accrued");
+                    });
+            })
+            .catch(err => {
+                console.log  (err)
+
+                alert("Sorry Please retry, error accrued");
+            })
+    }
+</script>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Doorliver</title>
+	<meta name="keywords" content="HTML5 Template">
+	<meta name="description" content="Doorliver">
+	<meta name="author" content="Doorliver">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/theme.css">
+</head>
+
+<body>
+	<div id="tt-pageContent">
+		<div class="tt-coming-soon background">
+			<div class="container">
+				<div class="row	justify-content-center">
+					<div class="col-md-8 tt-coming-soon-content">
+						<a class="tt-logo" href="../index.html"><img class="tt-retina" src="images/Logo.jpg" alt=""
+								style="min-width: 60px;  min-height: 60px" alt=""></a>
+						<h1 class="tt-title">Welcome to Doorliver</h1>
+						<div class="description">
+							I am so glad you have applied to become a Doorliver Seller. We believe your store will
+							be a big boost in our mission for 2-hour delivery on anything.
+						</div>
+						<h2 class="tt-title">Start Adding Products Now!</h2>
+						<div class="form-inline form-default justify-content-center">
+							<a type="submit"
+								href="../Dashboard/src/dashboard.html"
+								class="btn btn-primary">Begin</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="coming-soon-bottom">
+				<p>
+					&copy; Doorliver 2020. All Rights Reserved
+				</p>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		 https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyDt9Dz2UDPpAvNoesHzWMmQSveYWMsiTG8",
+			authDomain: "driver-4834d.firebaseapp.com",
+			databaseURL: "https://driver-4834d.firebaseio.com",
+			projectId: "driver-4834d",
+			storageBucket: "driver-4834d.appspot.com",
+			messagingSenderId: "1035330404068",
+			appId: "1:1035330404068:web:a0a3e7981be8efdba0b6f1",
+			measurementId: "G-PC0ZCYNDM2"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+		const auth = firebase.auth();
+		const db = firebase.firestore();
+	</script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="external/jquery/jquery.min.js"></script>
+	<script src="external/bootstrap/js/bootstrap.min.js"></script>
+	<script src="external/lazyLoad/lazyload.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
+<style>
+	.background {
+		background-color: white;
+	}
+</style>
+<script>
+	var user;
+	auth.onAuthStateChanged(firebaseUser => {
+		if (firebaseUser) {
+			this.user = firebaseUser.uid;
+			runData()
+		} else {
+			this.user = null;
+		}
+	})
+
+	function runData() {
+
+		var link1 = window.location.search.substring(6).split("&");
+		var link = link1[0]
+		console.log  (link)
+		console.log  (user)
+		// <!-- 
+		axios({
+			method: "POST",
+			url: 'https://us-central1-driver-4834d.cloudfunctions.net/addConnectAccount',
+			data: {
+				user,
+				link
+			},
+			headers: {
+				"content-type": "application/json"
+			}
+		}).then(function (response) {
+			console.log  (response)
+
+		}).catch(function (error) {
+
+			console.log  (error)
+		})
+	}
+</script>

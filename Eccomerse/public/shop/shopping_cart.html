@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Doorliver</title>
+	<meta name="keywords" content="HTML5 Template">
+	<meta name="description" content="Doorliver">
+	<meta name="author" content="Doorliver">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/theme.css">
+	<link rel="stylesheet" href="css/theme-books.css">
+	<link rel="stylesheet" href="css/anotherfont-books.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="loader-wrapper">
+		<div id="loader">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+		</div>
+	</div>
+	<header>
+		<!-- tt-mobile menu -->
+		<nav class="panel-menu mobile-main-menu">
+			<ul>
+				<li><a class="logged-out" style="display: none" href="login.html"></i>Sign In</a></li>
+				<li><a id="logout2" class="logged-in" style="display: none" href="#"></i>Sign out</a></li>
+				<li><a class="logged-out" style="display: none" href="create-account.html"></i>Register</a></li>
+			</ul>
+			<div class="mm-navbtn-names">
+				<div class="mm-closebtn">Close</div>
+				<div class="mm-backbtn">Back</div>
+			</div>
+		</nav>
+		<!-- tt-mobile-header -->
+		<div class="tt-mobile-header">
+			<div class="container-fluid">
+				<div class="tt-header-row">
+					<!-- <div class="tt-mobile-parent-menu">
+					<div class="tt-menu-toggle">
+						<i class="icon-03"></i>
+					</div>
+				</div> -->
+					<!-- search -->
+					<div class="tt-mobile-parent-search tt-parent-box"></div>
+					<!-- /search -->
+					<!-- cart -->
+					<div class="tt-mobile-parent-cart tt-parent-box"></div>
+					<!-- /cart -->
+					<!-- account -->
+					<div class="tt-mobile-parent-account tt-parent-box"></div>
+					<!-- /account -->
+				</div>
+			</div>
+			<div class="container-fluid tt-top-line">
+				<div class="row">
+					<div class="tt-logo-container">
+						<!-- mobile logo -->
+						<a class="tt-logo tt-logo-alignment" href="index.html"><img src="images/logo.jpg"
+								style="min-width: 40px;  min-height: 40px" alt=""></a>
+						<!-- /mobile logo -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- tt-desktop-header -->
+		<div class="tt-desktop-header">
+			<div class="container">
+				<div class="tt-header-holder">
+					<div class="tt-col-obj tt-obj-logo">
+						<!-- logo -->
+						<a class="tt-logo tt-logo-alignment" href="index.html"><img src="images/logo.jpg"
+								style="min-width: 40px;  min-height: 40px" alt=""></a>
+						<!-- /logo -->
+					</div>
+					<div class="tt-col-obj tt-obj-menu obj-aligment-right">
+						<!-- tt-menu -->
+						<!-- /tt-menu -->
+					</div>
+					<div class="tt-col-obj tt-obj-options">
+						<!-- tt-search -->
+
+						<div class="tt-desctop-parent-search tt-parent-box">
+							<div class="tt-search tt-dropdown-obj">
+								<button class="tt-dropdown-toggle" onclick="DoubleClick()" data-tooltip="Search"
+									data-tposition="bottom">
+									<i class="icon-f-85"></i>
+								</button>
+								<div class="tt-dropdown-menu">
+									<div class="container">
+										<form>
+											<div class="tt-col">
+												<input onkeypress="SearchKeyPress(value, event)" type="text"
+													class="tt-search-input" placeholder=" SEARCH HERE!">
+												<button onclick="SearchPress()" class="tt-btn-search"
+													type="button"></button>
+
+											</div>
+											<div class="tt-col">
+												<button class="tt-btn-close icon-g-80"></button>
+											</div>
+											<div class="tt-info-text">
+												What are you Looking for?
+											</div>
+											<div class="search-results">
+												<ul class="search-results-list">
+												</ul>
+												<button onclick="ViewAllProducts()" type="button"
+													class="tt-view-all">View all products</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /tt-search -->
+
+						<!-- tt-cart -->
+						<div class="tt-desctop-parent-cart tt-parent-box" href="shopping.html">
+							<div class="tt-cart tt-dropdown-obj" data-tooltip="Cart" data-tposition="bottom">
+								<a href="shopping_cart.html" class="tt-dropdown-toggle">
+									<i class="icon-f-39"></i>
+								</a>
+
+							</div>
+						</div>
+						<!-- tt-account -->
+						<div class="tt-desctop-parent-account tt-parent-box">
+							<div class="tt-account tt-dropdown-obj">
+								<button class="tt-dropdown-toggle" data-tooltip="My Account" data-tposition="bottom"><i
+										class="icon-f-94"></i></button>
+								<div class="tt-dropdown-menu">
+									<div class="tt-mobile-add">
+										<button class="tt-close">Close</button>
+									</div>
+									<div class="tt-dropdown-inner">
+										<ul>
+											<li><a href="login.html" class="logged-out" style="display: none"><i
+														class="icon-f-76"></i>Sign In</a></li>
+											<li><a id="logout1" href="#" class="logged-in" style="display: none"><i
+														class="icon-f-76"></i>Sign out</a></li>
+											<li><a href="create-account.html" class="logged-out"
+													style="display: none"><i class="icon-f-94"></i>Register</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- stuck nav -->
+		<div class="tt-stuck-nav">
+			<div class="container">
+				<div class="tt-header-row ">
+					<div class="tt-stuck-parent-menu"></div>
+					<div class="tt-stuck-parent-search tt-parent-box"></div>
+					<div class="tt-stuck-parent-cart tt-parent-box"></div>
+					<div class="tt-stuck-parent-account tt-parent-box"></div>
+					<div class="tt-stuck-parent-multi tt-parent-box"></div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="tt-breadcrumb">
+		<div class="container">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li>Shopping Cart</li>
+			</ul>
+		</div>
+	</div>
+	<div id="tt-pageContent">
+		<div class="container-indent">
+			<div class="container">
+				<h1 class="tt-title-subpages noborder">SHOPPING CART</h1>
+				<div class="row">
+					<div class="col-sm-12 col-xl-8">
+						<div class="tt-shopcart-table">
+							<table>
+								<tbody class="shopping-data">
+
+
+								</tbody>
+							</table>
+							<div class="tt-shopcart-btn">
+								<div class="col-left">
+									<a class="btn-link" href="listing-not-sidebar-full-width.html"><i
+											class="icon-e-19"></i>CONTINUE SHOPPING</a>
+								</div>
+								<div class="col-right">
+									<a class="btn-link" href="#"><i class="icon-f-48"></i>BUY NOW GET 3 HOUR
+										DELIVER!!!</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-xl-4">
+						<div class="tt-shopcart-wrapper">
+							<form action="/charge" method="post" id="payment-form" class="form-default">
+								<div class="tt-shopcart-box">
+									<h4 class="tt-title logged-out" style="padding-bottom:10px; display: none">Deliverd
+										In 3 Hours</h4>
+									<h4 class="tt-title logged-in" style="padding-bottom:10px; display: none">Where are
+										we delivering to?</h4>
+
+									<div class="form-row  need-payment" style="display: none">
+										<div class="inline logged-in" style="display: none">
+											<div class="form-group address">
+												<label for="registerInputAddress">Address</label>
+												<input type="text" name="address" class="form-control"
+													id="registerInputAddress" placeholder="Enter Address"
+													maxlength="30">
+											</div>
+											<div class="form-group city">
+												<label for="registerInputCity">City</label>
+												<input type="text" name="city" class="form-control"
+													id="registerInputCity" placeholder="Enter City" maxlength="30">
+											</div>
+										</div>
+										<div class="inline logged-in" style="display: none">
+											<div class="form-group state">
+												<label for="registerInputState">State</label>
+												<input type="text" name="state" class="form-control"
+													id="registerInputState" placeholder="Enter State" maxlength="2">
+											</div>
+											<div class="form-group zipcode">
+												<label for="registerInputZipcode">Zipcode</label>
+												<input type="text" name="zipcode" class="form-control"
+													id="registerInputZipcode" placeholder="Enter Zipcode" maxlength="5">
+											</div>
+										</div>
+										<label for="card-element" class="need-payment" style="display: none">
+											Credit or debit card
+										</label>
+										<div id="card-element" class="need-payment" style="display: none">
+											<!-- A Stripe Element will be inserted here. -->
+										</div>
+
+										<!-- Used to display Element errors. -->
+										<div id="card-errors" class="need-payment" style="display: none" role="alert">
+										</div>
+									</div>
+								</div>
+
+
+								<div class="tt-shopcart-box logged-in" style="display: none">
+									<h4 class="tt-title">
+										Notes For Driver?
+									</h4>
+									<div class="form-group">
+										<input type="text" name="name" class="form-control" id=""
+											placeholder="Put inside mailbox">
+									</div>
+								</div>
+
+								<div class="tt-shopcart-box tt-boredr-large">
+									<table class="tt-shopcart-table01">
+										<tbody>
+											<tr>
+												<th>Shipping: </th>
+												<td> FREE SHIPPING!</td>
+											</tr>
+											<tr>
+												<th>Arrival Time: </th>
+												<td> 3 Hours</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<th>GRAND TOTAL</th>
+												<td class="totalCost-value"></td>
+											</tr>
+										</tfoot>
+									</table>
+									<button class="btn btn-lg logged-in" style="display:none"><span
+											class="icon icon-check_circle"></span>Submit Payment</button>
+									<a href="login.html" class="btn btn-lg logged-out" style="display:none;">PROCEED TO
+										CHECKOUT</a>
+								</div>
+								<p class="error pink-text center-align"></p>
+
+							</form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+
+		<div class="tt-footer-custom">
+			<div class="container">
+				<div class="tt-row">
+					<div class="tt-col-left">
+						<div class="tt-col-item tt-logo-col">
+							<!-- logo -->
+							<a class="tt-logo tt-logo-alignment" href="index.html">
+								<img src="images/logo.jpg" alt="">
+							</a>
+							<!-- /logo -->
+						</div>
+						<div class="tt-col-item">
+							<!-- copyright -->
+							<div class="tt-box-copyright">
+								&copy; Doorliver 2020. All Rights Reserved
+							</div>
+							<!-- /copyright -->
+						</div>
+					</div>
+					<div class="tt-col-right">
+						<div class="tt-col-item">
+							<!-- payment-list -->
+							<ul class="tt-payment-list">
+								<li><a href="page404.html"><span class="icon-Stripe"><span class="path1"></span><span
+												class="path2"></span><span class="path3"></span><span
+												class="path4"></span><span class="path5"></span><span
+												class="path6"></span><span class="path7"></span><span
+												class="path8"></span><span class="path9"></span><span
+												class="path10"></span><span class="path11"></span><span
+												class="path12"></span>
+										</span></a></li>
+								<li><a href="page404.html"> <span class="icon-paypal-2">
+											<span class="path1"></span><span class="path2"></span><span
+												class="path3"></span><span class="path4"></span><span
+												class="path5"></span><span class="path6"></span>
+										</span></a></li>
+								<li><a href="page404.html"><span class="icon-visa">
+											<span class="path1"></span><span class="path2"></span><span
+												class="path3"></span><span class="path4"></span><span
+												class="path5"></span>
+										</span></a></li>
+								<li><a href="page404.html"><span class="icon-mastercard">
+											<span class="path1"></span><span class="path2"></span><span
+												class="path3"></span><span class="path4"></span><span
+												class="path5"></span><span class="path6"></span><span
+												class="path7"></span><span class="path8"></span><span
+												class="path9"></span><span class="path10"></span><span
+												class="path11"></span><span class="path12"></span><span
+												class="path13"></span>
+										</span></a></li>
+								<li><a href="page404.html"><span class="icon-discover">
+											<span class="path1"></span><span class="path2"></span><span
+												class="path3"></span><span class="path4"></span><span
+												class="path5"></span><span class="path6"></span><span
+												class="path7"></span><span class="path8"></span><span
+												class="path9"></span><span class="path10"></span><span
+												class="path11"></span><span class="path12"></span><span
+												class="path13"></span><span class="path14"></span><span
+												class="path15"></span><span class="path16"></span>
+										</span></a></li>
+								<li><a href="page404.html"><span class="icon-american-express">
+											<span class="path1"></span><span class="path2"></span><span
+												class="path3"></span><span class="path4"></span><span
+												class="path5"></span><span class="path6"></span><span
+												class="path7"></span><span class="path8"></span><span
+												class="path9"></span><span class="path10"></span><span
+												class="path11"></span>
+										</span></a></li>
+							</ul>
+							<!-- /payment-list -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<a href="#" class="tt-back-to-top">BACK TO TOP</a>
+
+	<!-- The Modal -->
+	<div id="id01" class="w3-modal"
+		style="margin-right:auto !important; margin-left:auto !important; text-align: center">
+		<img src="images/loader.svg" height="500" width="100%">
+	</div>
+
+	<script src="https://js.stripe.com/v3/"></script>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+		    apiKey: "AIzaSyDt9Dz2UDPpAvNoesHzWMmQSveYWMsiTG8",
+    authDomain: "driver-4834d.firebaseapp.com",
+    databaseURL: "https://driver-4834d.firebaseio.com",
+    projectId: "driver-4834d",
+    storageBucket: "driver-4834d.appspot.com",
+    messagingSenderId: "1035330404068",
+    appId: "1:1035330404068:web:8616624236b742faa0b6f1",
+    measurementId: "G-ZBV4L2F8G4"
+  };
+
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+
+		firebase.analytics();
+
+		const auth = firebase.auth();
+		const db = firebase.firestore();
+	</script>
+
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+	<script src="js/index.js"></script>
+	<script src="external/jquery/jquery.min.js"></script>
+	<script src="external/bootstrap/js/bootstrap.min.js"></script>
+	<script src="external/slick/slick.min.js"></script>
+	<script src="external/panelmenu/panelmenu.js"></script>
+	<script src="external/lazyLoad/lazyload.min.js"></script>
+	<script src="js/main.js"></script>
+	<!-- form validation and sending to mail -->
+	<script src="external/form/jquery.form.js"></script>
+	<script src="external/form/jquery.validate.min.js"></script>
+	<script src="external/form/jquery.form-init.js"></script>
+	<script src="https://js.stripe.com/v3/"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</body>
+
+</html>
+
+<style>
+	.image-value {
+
+		max-width: 70px !important;
+		max-height: 70px !important;
+		height: auto !important;
+		width: auto !important;
+		padding-left: 10%;
+
+	}
+
+	.inline {
+		display: inline-block;
+
+
+	}
+
+	.zipcode,
+	.city {
+		float: right;
+		max-width: 48.5%;
+	}
+
+	.state,
+	.address {
+		max-width: 48.5%;
+
+		float: left;
+	}
+
+	.pink-text {
+		color: #ff7090;
+	}
+</style>
+
+<script>
+	for (var i = 0; i < localStorage.length; i++) {
+
+		// set iteration key name
+		var key = localStorage.key(i);
+
+		// use key name to retrieve the corresponding value
+		var value = localStorage.getItem(key);
+
+		// console.log   the iteration key and value
+
+	}
+
+
+	var finalPrice = 0;
+	for (var i = 0; i < localStorage.length; i++) {
+
+		// set iteration key name
+		var key = localStorage.key(i);
+
+		// use key name to retrieve the corresponding value
+
+		var CartItem = localStorage.getItem(key);
+
+
+		var productData = localStorage.getItem(key);
+
+		// shoppingCartEmpty = false;
+		var productItem = document.createElement("tr");
+		productItem.className = "shopping-data-item"
+		productItem.innerHTML =
+			`
+												<td>
+													<a onclick="DeleteItem(id)"  class="tt-btn-close" href="shopping_cart.html"></a>
+												</td>
+												<td>
+													<div class="tt-product-img">
+														<img class="image-value" src="" data-src="" alt="">
+													</div>
+												</td>
+												<td>
+													<h2 class="tt-title ">
+														<a class= "tt-title-value" href="#"></a>
+													</h2>
+													<ul class="tt-list-parameters">
+														<li>
+															<div class="detach-quantity-mobile"></div>
+														</li>
+													
+													</ul>
+												</td>											
+												<td>
+													<div class="tt-price tt-price-value  subtotal">
+													</div>
+												</td>
+		`
+		productRows = document.getElementsByClassName('shopping-data')[0];
+
+		var product = JSON.parse(productData);
+
+		productRows.appendChild(productItem);
+		// console.log  (product)
+
+		document.getElementsByClassName("shopping-data-item")[i].setAttribute("id", key);
+
+		document.getElementsByClassName("tt-btn-close")[i + 1].setAttribute("id", key);
+
+
+		document.getElementsByClassName("tt-title-value")[i].innerHTML = product.name;
+
+		document.getElementsByClassName("image-value")[i].src = product.image;
+
+		document.getElementsByClassName('tt-price-value')[i].innerHTML = `$` + (product.salePrice * 1.07).toFixed(2);
+
+		finalPrice += product.salePrice;
+
+
+
+	}
+
+	finalPrice = (finalPrice * 1.1).toFixed(2)
+	document.getElementsByClassName('totalCost-value')[0].innerHTML = finalPrice
+
+	// Start of Stripe 
+	var stripe = Stripe('pk_test_KUbh5gtJIkBWyoEtkKV8cekt00giuCXOkf');
+	var elements = stripe.elements();
+
+	// Create an instance of the card Element.
+	var card = elements.create('card')
+
+	// Add an instance of the card Element into the `card-element` <div>.
+	card.mount('#card-element');
+
+	// Style the input field by adding previously made class
+	document.getElementById('card-element').classList.add("form-control");
+
+
+
+	// Create a token or display an error when the form is submitted.
+	var form = document.getElementById('payment-form');
+	form.addEventListener('submit', function (event) {
+		event.preventDefault();
+
+		stripe.createToken(card).then(function (result) {
+			if (result.error) {
+				// Inform the customer that there was an error.
+				var errorElement = document.getElementById('card-errors');
+				errorElement.textContent = result.error.message;
+			} else {
+				// Send the token to your server.
+				StripeTokenHandler(result.token);
+			}
+		});
+	});
+
+
+	var stripeCustomerInitialized;
+	var sources = {}
+	var charge
+	var user;
+	var newCharge = {
+		source: null,
+		amount: finalPrice
+	}
+
+	auth.onAuthStateChanged(firebaseUser => {
+		if (firebaseUser) {
+			this.user = firebaseUser;
+
+			this.listen();
+
+		} else {
+			this.user = null;
+		}
+	});
+
+	function listen() {
+		firebase.firestore().collection('stripe_customers').doc(user.uid).onSnapshot(snapshot => {
+			stripeCustomerInitialized = (snapshot.data() !== null)
+
+			const needPayment = document.querySelectorAll('.need-payment')
+			needPayment.forEach(item => item.style.display = 'block');
+
+		}, () => {
+			stripeCustomerInitialized = false;
+
+		});
+
+		firebase.firestore().collection('stripe_customers').doc(user.uid).collection('sources')
+			.onSnapshot(
+				snapshot => {
+					let newSources = {};
+					snapshot.forEach(doc => {
+						console.log  (doc);
+						const id = doc.id;
+						newSources[id] = doc.data().id;
+					})
+					this.sources = newSources;
+				}, () => {
+					this.sources = {};
+				});
+	};
+
+	// submit token to server
+	function StripeTokenHandler(token) {
+		// Insert the token ID into the form so it gets submitted to the server
+		firebase.firestore().collection('stripe_customers').doc(user.uid).collection('tokens').add({
+				token: token.id
+			})
+
+			.then(res => {
+				//
+				StripeChargeCard();
+			}).catch(err => {
+				document.getElementsByClassName('error')[0].innerHTML = "Sorry there was a error";
+			})
+	}
+
+
+	// charge card  
+	function StripeChargeCard() {
+		// Send source cardID and amount to our server 
+		firebase.firestore().collection('stripe_customers').doc(user.uid).collection('charges')
+			.add({
+				source: this.sources,
+				amount: Math.round(this.newCharge.amount),
+
+
+			}).then(res => {
+				charge = res.id;
+				CheckCharge(charge);
+
+			}).catch(err => {
+
+				charge = err;
+				document.getElementsByClassName('error')[0].innerHTML = "Sorry there was a error";
+
+
+			})
+	}
+	// check response from our charge
+	function CheckCharge(charge) {
+		firebase.firestore().collection('stripe_customers').doc(user.uid).collection('charges').doc(charge)
+			.onSnapshot(doc => {
+					this.newCharge = doc.data()
+					Purchase()
+
+					// if (newCharge.outcome.seller_message = !null) {
+					// 	document.getElementsByClassName('error')[0].innerHTML = newCharge.outcome.seller_message
+
+					// } else if (newCharge.error = !null) {
+					// 	document.getElementsByClassName('error')[0].innerHTML = "Sorry there was a error"
+					// } else {
+					// 	alert("hello")
+					// }
+					if (newCharge.error) {
+						// Show error to your customer (e.g., insufficient funds)
+						console.log  (result);
+						
+					} else {
+						// The payment has been processed!
+						if (newCharge.paymentIntent.status === 'succeeded') {
+							// Show a success message to your customer
+							// There's a risk of the customer closing the window before callback
+							// execution. Set up a webhook or plugin to listen for the
+							// payment_intent.succeeded event that handles any business critical
+							// post-payment actions.
+
+
+
+
+						}
+
+
+				}
+			})
+	}
+				// End of Stripe
+
+
+
+
+
+				function Purchase() {
+					var registerForm = document.getElementById('payment-form');
+
+					var address = registerForm['registerInputAddress'].value
+					var city = registerForm['registerInputCity'].value
+					var state = registerForm['registerInputState'].value
+					var zipcode = registerForm['registerInputZipcode'].value
+
+
+
+					var order = {}, // Notice change here
+						keys = Object.keys(localStorage),
+						i = keys.length;
+
+					while (i--) {
+						order[keys[i]] = localStorage.getItem(keys[i]);
+					}
+
+
+
+					db.collection('orders')
+						.add({
+							amount: finalPrice,
+							order: order,
+							customer: {
+								id: user.uid,
+								name: user.displayName,
+								location: {
+									address: address,
+									city: city,
+									state: state,
+									zipcode: zipcode,
+								}
+
+							},
+						}).then(function () {
+							//     window.location.href = "coming-soon.html";
+							//     registerForm3.querySelector('.error').innerHTML = '';
+						}).catch(err => {
+							document.getElementsByClassName('error')[0].innerHTML = "Sorry there was a error"
+						})
+				}
+</script>

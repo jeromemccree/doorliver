@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en" class="no-focus">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>Doorliver Dashboard</title>
+
+    <meta name="description"
+        content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Codebase">
+    <meta property="og:description"
+        content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../img/favicon.ico">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+
+    <!-- Fonts and Codebase framework -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700&display=swap">
+    <link rel="stylesheet" id="css-main" href="assets/css/codebase.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> -->
+    <!-- END Stylesheets -->
+</head>
+
+<body>
+
+    <!-- Page Container -->
+    <!--
+            Available classes for #page-container:
+
+        GENERIC
+
+            'enable-cookies'                            Remembers active color theme between pages (when set through color theme helper Template._uiHandleTheme())
+
+        SIDEBAR & SIDE OVERLAY
+
+            'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+            'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+            'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+            'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+            'sidebar-inverse'                           Dark themed sidebar
+
+            'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+            'side-overlay-o'                            Visible Side Overlay by default
+
+            'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+            'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+        HEADER
+
+            ''                                          Static Header if no class is added
+            'page-header-fixed'                         Fixed Header
+
+        HEADER STYLE
+
+            ''                                          Classic Header style if no class is added
+            'page-header-modern'                        Modern Header style
+            'page-header-inverse'                       Dark themed Header (works only with classic Header style)
+            'page-header-glass'                         Light themed Header with transparency by default
+                                                        (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+            'page-header-glass page-header-inverse'     Dark themed Header with transparency by default
+                                                        (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+        MAIN CONTENT LAYOUT
+
+            ''                                          Full width Main Content if no class is added
+            'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+            'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+        -->
+
+    <!-- <button type="button" class="btn btn-circle btn-dual-secondary align-v-r" data-toggle="layout" data-action="side_overlay_close">
+            <i class="fa fa-times text-danger"></i>
+        </button> -->
+    <div id="page-container"
+        class="enable-page-overlay side-scroll page-header-glass page-header-inverse main-content-boxed">
+        <!-- Header -->
+        <header id="page-header">
+            <!-- Header Content -->
+            <div class="content-header">
+                <!-- Left Section -->
+                <div class="content-header-section">
+
+                </div>
+                <!-- END Left Section -->
+
+                <!-- Right Section -->
+                <div class="content-header-section">
+                    <!-- User Dropdown -->
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user d-sm-none"></i>
+                            <span class="d-none d-sm-inline-block"></span>
+                            <i class="fa fa-angle-down ml-5"></i>
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-right min-width-200"
+                            aria-labelledby="page-header-user-dropdown">
+                            <h5 class="h6 text-center py-10 mb-5 border-b text-uppercase">User</h5>
+                            <!-- END Side Overlay -->
+                            <a class="dropdown-item" href="op_auth_signin.html">
+                                <i class="si si-logout mr-5"></i> Sign Out
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- END Toggle Side Overlay -->
+                </div>
+                <!-- END Right Section -->
+            </div>
+            <!-- END Header Content -->
+
+
+            <!-- END Header Search -->
+
+            <!-- Header Loader -->
+            <!-- Please check out the Activity page under Elements category to see examples of showing/hiding it -->
+            <!-- <div id="page-header-loader" class="overlay-header bg-primary">
+                <div class="content-header content-header-fullrow text-center">
+                    <div class="content-header-item">
+                        <i class="fa fa-sun-o fa-spin text-white"></i>
+                    </div>
+                </div>
+            </div> -->
+            <!-- END Header Loader -->
+        </header>
+        <!-- END Header -->
+
+        <!-- Main Container -->
+        <main id="main-container">
+
+            <!-- Hero -->
+            <div class="bg-image" style="background-image: url('assets/media/photos/photo26@2x.jpg');">
+                <div class="bg-black-op-75">
+                    <div class="content content-top content-full text-center">
+                        <div class="py-20">
+                            <h1 class="h2 font-w700 text-white mb-10">Welcome to your Dashboard</h1>
+                            <h2 class="h4 font-w400 text-white-op mb-0">Manage your products</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Hero -->
+
+            <!-- Breadcrumb -->
+            <div class="bg-body-light border-b">
+                <div class="content py-5 text-center">
+                    <nav class="breadcrumb bg-body-light mb-0">
+                        <a class="breadcrumb-item" href="#">Dashboard</a>
+                    </nav>
+                </div>
+            </div>
+            <!-- END Breadcrumb -->
+
+            <!-- Page Content -->
+            <div class="content">
+                <!-- Overview -->
+                <h2 class="content-heading">Overview</h2>
+                <div class="row gutters-tiny">
+                    <!-- All Products -->
+                    <div class="col-md-6 col-xl-3">
+                        <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                            <div class="block-content block-content-full block-sticky-options">
+                                <div class="block-options">
+                                    <div class="block-options-item">
+                                        <i class="fa fa-circle-o fa-2x text-info-light"></i>
+                                    </div>
+                                </div>
+                                <div class="py-20 text-center">
+                                    <div class="font-size-h2 font-w700 mb-0 text-info allProducts"
+                                        data-toggle="allProducts"></div>
+                                    <div class="font-size-sm font-w600 text-uppercase text-muted">All Products</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- END All Products -->
+
+                    <!-- Top Sellers -->
+                    <!-- <div class="col-md-6 col-xl-3">
+                            <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                                <div class="block-content block-content-full block-sticky-options">
+                                    <div class="block-options">
+                                        <div class="block-options-item">
+                                            <i class="fa fa-star fa-2x text-warning-light"></i>
+                                        </div>
+                                    </div>
+                                    <div class="py-20 text-center">
+                                        <div class="font-size-h2 font-w700 mb-0 text-warning" data-toggle="countTo" data-to="95">0</div>
+                                        <div class="font-size-sm font-w600 text-uppercase text-muted">Top Sellers</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div> -->
+                    <!-- END Top Sellers -->
+
+
+                    <!-- Add Product -->
+                    <div class="col-md-6 col-xl-3">
+                        <a class="block block-rounded block-link-shadow" href="add-product.html">
+                            <div class="block-content block-content-full block-sticky-options">
+                                <div class="block-options">
+                                    <div class="block-options-item">
+                                        <i class="fa fa-archive fa-2x text-success-light"></i>
+                                    </div>
+                                </div>
+                                <div class="py-20 text-center">
+                                    <div class="font-size-h2 font-w700 mb-0 text-success">
+                                        <i class="fa fa-plus"></i>
+                                    </div>
+                                    <div class="font-size-sm font-w600 text-uppercase text-muted">New Product</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- END Add Product -->
+                </div>
+                <!-- END Overview -->
+
+                <!-- Products -->
+                <div class="content-heading">
+
+
+                    All Products
+                </div>
+                <div class="block block-rounded">
+                    <div class="block-content bg-body-light">
+                        <!-- Search -->
+                        <form action="dashboard.html" method="post" onsubmit="return false;">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search products..">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-secondary">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- END Search -->
+                    </div>
+                    <div class="block-content">
+                        <!-- Products Table -->
+                        <table class="table table-borderless table-striped">
+                            <thead>
+                                <tr>
+
+                                    <!-- <th style="width: 100px;">item</th> -->
+                                    <th>Item</th>
+                                    <th>Name</th>
+                                    <th>category</th>
+                                    <th>stock</th>
+                                    <th class="d-none d-md-table-cell">Price</th>
+                                    <th class="text-right">sold</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+
+                            </tbody>
+                        </table>
+                        <!-- END Products Table -->
+
+                        <!-- Navigation -->
+                        <nav aria-label="Products navigation">
+                            <ul class="pagination justify-content-end">
+                                <!-- <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                                            <span aria-hidden="true">
+                                                <i class="fa fa-angle-left"></i>
+                                            </span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li> -->
+                                <li class="page-item active">
+                                    <a class="page-link" href="javascript:void(0)">1</a>
+                                </li>
+                                <!-- <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)">2</a>
+                                    </li> -->
+
+                                <!-- <li class="page-item">
+                                        <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                                            <span aria-hidden="true">
+                                                <i class="fa fa-angle-right"></i>
+                                            </span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li> -->
+                            </ul>
+                        </nav>
+                        <!-- END Navigation -->
+                    </div>
+                </div>
+                <!-- END Products -->
+            </div>
+            <!-- END Page Content -->
+
+        </main>
+        <!-- END Main Container -->
+
+        <!-- Footer -->
+        <footer id="page-footer" class="opacity-0">
+            <div class="content py-20 font-size-sm clearfix">
+                <div class="float-left">
+                    <a class="font-w600" href="#" target="_blank">Doorliver</a> &copy;
+                    <span class="js-year-copy"></span>
+                </div>
+            </div>
+        </footer>
+        <!-- END Footer -->
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDt9Dz2UDPpAvNoesHzWMmQSveYWMsiTG8",
+            authDomain: "driver-4834d.firebaseapp.com",
+            databaseURL: "https://driver-4834d.firebaseio.com",
+            projectId: "driver-4834d",
+            storageBucket: "driver-4834d.appspot.com",
+            messagingSenderId: "1035330404068",
+            appId: "1:1035330404068:web:a0a3e7981be8efdba0b6f1",
+            measurementId: "G-PC0ZCYNDM2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+    <script src="assets/js/codebase.core.min.js"></script>
+    <script src="assets/js/codebase.app.min.js"></script>
+</body>
+
+</html>
+
+<script>
+    var user;
+    auth.onAuthStateChanged(firebaseUser => {
+        if (firebaseUser) {
+            console.log  ("user logged in")
+            this.user = firebaseUser;
+            document.getElementsByClassName("fa-user")[0].innerHTML = this.user.displayName
+        } else {
+            console.log  ("user logged out")
+            this.user = null;
+        }
+    })
+    setTimeout(() => {
+        let citiesRef = db.collection('products');
+        let query = citiesRef.where('store.id', '==', user.uid).get()
+            .then(snapshot => {
+                if (snapshot.empty) {
+                    console.log  ('No matching documents.');
+                    console.log  (snapshot);
+                    return;
+                }
+                var i = 0
+                document.getElementsByClassName("allProducts")[0].innerHTML = snapshot.size;
+
+                snapshot.forEach(data => {
+                    var product = data.data();
+
+                    // for (i = 0; i < snapshot.docs.length; i++) {
+                    var productItem = document.createElement("tr");
+                    productItem.innerHTML = ` 
+                                    <td class="">
+                                        <span class="text-black image"> <img src=""></span>
+                                       
+                                    </td> 
+                                    <td class="">
+                                        <span class="text-black name"></span>
+                                    </td>
+                                    <td class="">
+                                        <span class="text-black category "></span>
+                                    <td>
+                                        <span class="text-black stock "></span>
+                                    </td>
+                                    <td class="d-none d-md-table-cell">
+                                        <span class="text-black price "></span>
+                                    </td>
+                                    <td class="text-right">
+                                        <span class="text-black sold"></span>
+                                    </td>`
+
+                    productRows = document.getElementsByTagName('tbody')[0];
+                    productRows.appendChild(productItem);
+                    // document.getElementsByClassName("product-button")[i].setAttribute("id", i);
+                    document.getElementsByTagName("img")[i].src = product.images[0];
+                    document.getElementsByClassName("name")[i].innerHTML = product.name;
+                    document.getElementsByClassName("price")[i].innerHTML = product.salePrice;
+                    document.getElementsByClassName("category")[i].innerHTML = product.category;
+                    document.getElementsByClassName("stock")[i].innerHTML = product.stock;
+                    document.getElementsByClassName("sold")[i].innerHTML = product.sold;
+                    i++
+                    console.log  (product)
+
+                })
+
+
+            })
+            .catch(err => {
+                console.log  ('Error getting documents', err);
+            });
+
+    }, 2000);
+</script>
+
+<style>
+
+img{
+max-width: 40px !important;
+
+
+}
+</style>
